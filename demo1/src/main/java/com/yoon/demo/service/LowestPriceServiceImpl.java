@@ -35,7 +35,7 @@ public class LowestPriceServiceImpl implements LowestPriceService {
         List<Product> productList = newProductGrp.getProductList();
         productList.forEach(i->
                 redisTemplate.opsForZSet().add(newProductGrp.getProdGrpId(), i.getProductId(), i.getPrice()));
-        return redisTemplate.opsForZSet().zCard(newProductGrp.getProdGrpId()).intValue(); /** 해당 상품 그룹의 총 상품 갯수*/
+        return redisTemplate.opsForZSet().zCard(newProductGrp.getProdGrpId()).intValue(); /** 해당 상품 그룹의 총                                      Z상품 갯수*/
     }
 
     @Override

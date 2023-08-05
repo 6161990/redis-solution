@@ -2,11 +2,13 @@ plugins {
     id 'org.springframework.boot' version '2.5.2'
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
+    id 'io.freefair.lombok' version '6.5.0-rc1'
 }
 
 group = 'com.yoon'
 version = '0.0.1-SNAPSHOT'
-description = 'demo'
+sourceCompatibility = '17'
+targetCompatibility = '17'
 
 repositories {
     mavenCentral()
@@ -18,11 +20,12 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web-services'
     implementation 'org.projectlombok:lombok'
     implementation 'io.projectreactor:reactor-test'
-    implementation 'org.springframework.boot:spring-boot-starter-web-services'
     implementation 'org.springframework.boot:spring-boot-starter-data-redis'
     implementation 'org.springframework.boot:spring-boot-starter-data-redis-reactive'
     implementation 'io.springfox:springfox-swagger2:2.9.2'
     implementation 'io.springfox:springfox-swagger-ui:2.9.2'
+    implementation 'org.springframework.boot:spring-boot-configuration-processor'
+
 }
 
 test {
