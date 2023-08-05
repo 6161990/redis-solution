@@ -19,6 +19,7 @@ public class RedisConfiguration {
     public RedisConnectionFactory redisConnectionFactory(){
         return new LettuceConnectionFactory(redisProperties.getHost(), redisProperties.getPort());
     }
+
     @Bean
     @Primary /** spring 기본 RedisTemplate 있기 때문에 primary 지정 */
     public RedisTemplate<String, Object> redisTemplate(){
